@@ -1,0 +1,19 @@
+extends layout
+block contenido
+  div(class="container")
+    h1(class="green-text") Modificar Disco
+    form(action="discografia" method="post")
+      div(class="input-field")
+        label(for="nombre") Nombre
+        input(type="text" name="nombre" placeholer="Nombre" id="nombre" autofocus="true" value="#{disco.nombre}")
+      div(class="input-field")
+        label(for="apellido") Año
+        input(type="number" name="anio" placeholer="Año" id="anio"  value="#{disco.anio}" step="1" min="1920" max="2017")
+      div(class="input-field")
+        label(for="edad") Url Imagen
+        input(type="url" name="imagen" placeholer="Url Imgen" id="imagen"  value="#{disco.imagen}")
+      div(class="row center")
+        div(class="input-field")
+          input(type="hidden" name="id" value="#{disco.idArtista}")
+          input(type="hidden" name="_id" value="#{disco._id}")
+          input(type="submit" value="Modificar Disco" class="btn waves-effect waves-light")

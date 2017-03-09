@@ -1,0 +1,18 @@
+extends layout
+block contenido
+  div(class="container")
+    h1(class="green-text") Nuevo Usuario
+    form(action="inserta-artista" method="post")
+      div(class="input-field")
+        label(for="nombre") Nombre
+        input(type="text" name="nombre" placeholer="Nombre" id="nombre" autofocus="true")
+      div(class="input-field")
+        label(for="apellido") Discográfica
+        input(type="text" name="discografica" placeholer="Discográfica" id="discografica")
+      div(class="input-field")
+        label(for="edad") Url Imagen
+        input(type="url" name="imagen" placeholer="Url Imagen" id="imagen")
+      div(class="row center")
+        div(class="input-field")
+          input(type="submit" value="Insertar" class="btn waves-effect waves-light")
+    

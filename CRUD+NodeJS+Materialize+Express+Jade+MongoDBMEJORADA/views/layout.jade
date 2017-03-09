@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="es")
+head
+  meta(charset="UTF-8")
+  title Gestion de Artistas y discos
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css")
+  link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+body
+  header 
+    h1(class="left") Artistas y discos
+    a(class="waves-effect waves-light btn right" href="/")
+      i(class="large material-icons") store
+  div(class="container")
+    form(action="buscar" method="get")
+      input(type="text" placeholder="Nombre de la banda" name="nombre" autofocus="true")
+      input(type="submit" value="Buscar" class="btn waves-effect waves-light")
+  div(class="row center")  
+  block contenido
+  div(class="row center")
+    footer &copy; Eliana Mariel Ferioli Núñez
+  script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js")
+    

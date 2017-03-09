@@ -1,0 +1,26 @@
+extends layout
+block contenido
+  h5 Listado de Discos
+  h6 Insertar Disco 
+    a(class="btn-floating btn-large red center" href="formularioDisco?idArtista=#{id}")
+      i(class="large material-icons") input
+  div(class="container")
+    table(class="striped centered")
+      thead
+        tr
+          th
+          th Nombre
+          th Año
+          th
+      tbody
+        for d in disco
+          tr
+            td 
+                img(src="#{d.imagen}" with="50px" height="50px")
+            td #{d.nombre}
+            td #{d.anio}            
+            td
+              a(class="btn-floating btn-large red center" href="modificar-disco?id=#{d._id}")
+                i(class="large material-icons") mode_edit
+              a(class="btn-floating btn-large red right" href="borrar-disco?id=#{d._id}&idArtista=#{d.idArtista}")
+                i(class="large material-icons") delete

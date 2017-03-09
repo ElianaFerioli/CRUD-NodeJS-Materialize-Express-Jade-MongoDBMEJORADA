@@ -1,0 +1,18 @@
+extends layout
+block contenido
+  div(class="container")
+    h1(class="green-text") Modificar Artista
+    form(action="index" method="post")
+      div(class="input-field")
+        label(for="nombre") Nombre
+        input(type="text" name="nombre" placeholer="Nombre" id="nombre" autofocus="true" value="#{artista.nombre}")
+      div(class="input-field")
+        label(for="apellido") Discográfica
+        input(type="text" name="discografica" placeholer="Discográfica" id="discografica"  value="#{artista.discografica}")
+      div(class="input-field")
+        label(for="edad") Url Imagen
+        input(type="url" name="imagen" placeholer="Url Imgen" id="imagen"  value="#{artista.imagen}")
+      div(class="row center")
+        div(class="input-field")
+          input(type="hidden" name="_id" value="#{artista._id}")
+          input(type="submit" value="Modificar Artista" class="btn waves-effect waves-light")

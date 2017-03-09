@@ -1,0 +1,28 @@
+extends layout
+block contenido
+  h5 Listado de Artistas
+  h6 Insertar Artista 
+    a(class="btn-floating btn-large red center" href="formulario-artista")
+      i(class="large material-icons") input
+  div(class="container")
+    table(class="striped centered")
+      thead
+        tr
+          th
+          th Nombre
+          th Discográfica
+          th
+      tbody
+        for a in artista
+          tr
+            td 
+                img(src="#{a.imagen}" with="50px" height="50px")
+            td #{a.nombre}
+            td #{a.discografica}            
+            td
+             a(class="btn-floating btn-large red left" href="discografia?id=#{a._id}")
+                i(class="large material-icons") view_list
+              a(class="btn-floating btn-large red center" href="modificar-artista?id=#{a._id}")
+                i(class="large material-icons") mode_edit
+              a(class="btn-floating btn-large red right" href="borrar-artista?id=#{a._id}")
+                i(class="large material-icons") delete
